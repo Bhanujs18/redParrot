@@ -75,6 +75,28 @@ background-color: #EEEEEE;
 color: #e0001a;
 font-size: 1.3rem;
 gap: 1rem;
+padding: 2rem 0rem;
+}
+
+.socialIcons{
+  display: flex;
+  gap: 0.5rem;
+  div{
+    img{
+      background-color: white;
+      border-radius: 50%;
+      padding: 0.2rem;
+    }
+  }
+}
+
+.copyright{
+  width: 100%;
+  background-color: #a11122;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0rem;
 }
 
 .items{
@@ -110,3 +132,78 @@ gap: 1rem;
   background-color : #ce3345;
 }
 
+.orderDetails{
+  display: flex;
+  gap: 1rem;
+
+}
+.orderDetailsDiv{
+  background-color: #ce3345;
+  padding: 1rem;
+  color: white;
+  border-radius: 15px;
+  width: max-content;
+}
+
+.myOrdersCardDiv{
+  padding: 0.2rem;
+display: flex;
+}
+
+.wallet{
+  img{
+    border-right: #a11122;
+  }
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0rem;
+}
+
+.myOrders{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: left;
+ 
+}
+
+.footer{
+padding: 2rem;
+box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+background-color: #ce3345;
+}
+
+.logo{
+  height: 6rem;
+}
+
+.shadowc{
+  filter: drop-shadow(-5px 1px 1px black);
+}
+
+.appDownload{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 0.2rem;
+}
+
+.app{
+  background-color: black;
+padding: 1rem;
+width: 10rem;
+display: flex;
+align-items: center;
+border-radius: 15px;
+height: 4rem;
+
+  img{
+  width: 2rem;
+  }
+}

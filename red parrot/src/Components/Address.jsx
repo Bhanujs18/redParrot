@@ -1,11 +1,17 @@
+import axios from 'axios';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { useNavigate } from 'react-router-dom';
 
-function Address() {
+function Address({products , setPaid}) {
+
+const navigate = useNavigate();
+  const price = products.reduce((acc , cur)=>acc+cur.price , 0)
+
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -17,6 +23,20 @@ function Address() {
 
     setValidated(true);
   };
+
+const orderplaced =  () => {
+
+  try{
+    axios.post("http://localhost:3000/api/v1/order/createOrder" , {
+     items : products,
+     price : price,
+     status : "Pending"
+  }).then(()=>navigate("/profile")).catch(()=>navigate("/orderNotPlaced"))
+   }
+catch(err){
+  console.log(err)
+}
+}
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit} className='address'>
@@ -90,7 +110,7 @@ function Address() {
         
         />
       </Form.Group>
-      <Button type="submit" style={{border:'none',background:'#EEEEEE' , color:'#ce3345'}}>Pay $349</Button>
+      <Button type="submit" style={{border:'none',background:'#EEEEEE' , color:'#ce3345'}} onClick={()=>orderplaced()}>Pay $349</Button>
     </Form>
   );
 }

@@ -58,8 +58,8 @@ const Header = () => {
         </div>
      
         <RightSection style={{display:'flex'}}> 
-            <Link className='links' ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/ios-filled/50/ffffff/wallet.png" alt="wallet"/>$654</Linker></Link>
-            <Link className='links' ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/gender-neutral-user.png" alt="gender-neutral-user"/></Linker></Link>
+            <Link to="/wallet" className='links' ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/ios-filled/50/ffffff/wallet.png" alt="wallet"/>$654</Linker></Link>
+            <Link to='/profile' className='links' ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/gender-neutral-user.png" alt="gender-neutral-user"/></Linker></Link>
             <Link className='links' to="/cart" ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/shopping-cart.png" alt="shopping-cart"/>{quantity}</Linker></Link>
         </RightSection>
     </Container>

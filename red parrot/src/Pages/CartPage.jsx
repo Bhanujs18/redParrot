@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Cart from '../Components/Cart'
 import OrderSummary from '../Components/OrderSummary'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Button from 'react-bootstrap/Button';
 import { NavLink, redirect } from 'react-router-dom';
 import Address from '../Components/Address';
+import { clearCart } from '../features/cartSlice';
 
 const CartPage = () => {
+
+  const [paid , setPaid] = useState(false);
+
+  const dispatch = useDispatch();
+
+  if(paid){
+    dispatch(clearCart());
+  }
+
     const products = useSelector((state)=>state.cart.products);
     const price = products.reduce((acc , cur)=>acc+cur.price , 0)
     console.log(price)
@@ -20,7 +30,7 @@ const CartPage = () => {
         </div>
 
         <div className='shipping'>
-     <Address />
+     <Address setPaid={setPaid} products={products}/>
      <img className='girl' src='./imgs/girl.png' />
      </div>
         </div>
