@@ -5,7 +5,9 @@ const Wrapper = styled.section`
 display: flex;
 flex-wrap: wrap;
 gap: 1rem;
+width: 100%;
 margin:0;
+height: max-content;
 padding:0;
 align-items:Center;
 justify-content:Center;
@@ -13,19 +15,24 @@ justify-content:Center;
 const Card = styled.div`
 display: flex;
 align-items: center;
-background: #ce3345;
+background-color: ${({theme})=>theme.colors.mainColor};
 color: white;
+gap: 0.5rem;
 border-radius: 15px;
 height: 6rem;
-justify-content:Center;
 padding: 1rem;
-width: 30%;
+width: 25%;
+p{
+  margin:0%;
+  font-size: 1.1rem;
+}
 `
 
 const UpdateAccount = () => {
   return (
+    <div style={{display:'flex' , justifyContent:'center' , alignItems:'center' , width:'65%'}}>
     <Wrapper>
-        <Card>
+                    <Card>
         <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/ffffff/user.png" alt="user"/>
         <p>Update Account</p>
         </Card>
@@ -49,7 +56,10 @@ const UpdateAccount = () => {
         <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/ffffff/user.png" alt="user"/>
         <p>Wallet</p>
         </Card>
+     
+
     </Wrapper>
+    </div>
   )
 }
 

@@ -5,8 +5,10 @@ const Footer = () => {
 
     // <img className='logo shadowc' src='https://res.cloudinary.com/dyqynjew8/image/upload/v1705139976/h_tbgf1s.png' />
 
+    <div style={{background:'black' }}>
+              <div  style={{textAlign:'center'}}><p style={{fontSize:'2rem' , fontWeight:800 , color:'white', padding:'1rem 0rem'}}>red parrot</p></div>
+
     <div className='footer'>
-        <div  style={{textAlign:'center'}}><p style={{fontSize:'2rem' , fontWeight:800}}>red parrot</p></div>
        
         <div>
         <p>Online Shopping</p>
@@ -41,6 +43,8 @@ const Footer = () => {
         <div><img width="30" height="30" src="https://img.icons8.com/color-glass/48/instagram-new--v1.png" alt="instagram-new--v1"/></div>
         </div>
     </div>
+    </div>
+
   )
 }
 

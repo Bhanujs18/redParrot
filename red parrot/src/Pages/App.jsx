@@ -6,15 +6,18 @@ import Error from '../Components/Error';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from 'styled-components';
 import CartPage from './CartPage';
-import Footer from '../Components/Footer/Footer';
 import Wallet from '../Components/Wallet';
 import Profile from './Profile';
 import OrderPlaced from '../Components/OrderPlaced';
+import Trending from './Trending';
+import Men from './Men';
+import Women from './Women';
+import Footer from '../Components/Header/Footer/Footer';
 
 const App = () => {
   const theme =  {
   colors : {
-    mainColor: "#CE3345"
+    mainColor: "#A11122"
   }
 }
   return (
@@ -28,6 +31,10 @@ const App = () => {
         <Route path='/wallet' element={<Wallet />} />
         <Route path='/orderPlaced' element={<OrderPlaced />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/trending' element={<Trending />} />
+        <Route path='/men' element={<Men />} />
+        <Route path='/women' element={<Women />} />
+
       </Routes>
       <Footer />
       <div className='copyright'>© 2024 www.redparrot.com. All rights reserved.</div>

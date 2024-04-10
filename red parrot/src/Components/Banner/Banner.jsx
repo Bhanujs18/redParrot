@@ -10,6 +10,7 @@ const Wrapper = styled.section`
 display: flex;
 height: max-content;
 align-items: center;
+position: relative;
 .mySwiper{
 }
 `
@@ -18,8 +19,6 @@ align-items: center;
 const Banner = () => {
   return (
     <Wrapper>
-        <div>
-        </div>
         <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -34,12 +33,12 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><img style={{width:"100%"}} src='https://res.cloudinary.com/dyqynjew8/image/upload/v1705893361/Untitled_design_45_1_rqstot.png' /></SwiperSlide>
-        <SwiperSlide><img style={{width:"100%"}} src="https://res.cloudinary.com/dyqynjew8/image/upload/v1705893589/Untitled_design_46_1_zx1ufe.png"/></SwiperSlide>
-        <SwiperSlide><img style={{width:"100%"}} src="https://res.cloudinary.com/dyqynjew8/image/upload/v1705894651/2024_3_wkguof.png"/></SwiperSlide>
-        <SwiperSlide><img style={{width:"100%"}} src='https://res.cloudinary.com/dyqynjew8/image/upload/v1705894555/2024_2_1_ye2kjw.png' /></SwiperSlide>
-       
+        <SwiperSlide><img className='bannerImg' style={{width:"100%"}} src='https://fitout.hu/wp-content/uploads/2020/08/Grosbasket-1-scaled-1.jpg' /></SwiperSlide>
+        <SwiperSlide><img className='bannerImg' style={{width:"100%"}} src="https://learn.zoner.com/wp-content/uploads/2020/09/wide-angle-lenses-for-portrait-photography-sure-just-stand-back-and-choose-the-right-angle.jpg"/></SwiperSlide>
+        <SwiperSlide><img className='bannerImg' style={{width:"100%"}} src="https://www.shutterstock.com/image-photo/man-sitting-on-stairs-lifestyle-600nw-740474782.jpg"/></SwiperSlide>
+        <SwiperSlide><img className='bannerImg' style={{width:"100%"}} src='https://social.thearvindstore.com/images/home_banner.jpg?version=2.2.15&subv=1.8' /></SwiperSlide>
       </Swiper>
+      <div className='bannerText'><h1>Welcom</h1></div>
     </Wrapper>
   )
 }

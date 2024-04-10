@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -31,6 +31,7 @@ align-items: center;
 padding: 0.5rem 2rem;
 gap: 3rem;
 text-decoration: none;
+
 `
 const RightSection = styled.div`
 display: flex;
@@ -42,7 +43,7 @@ padding: 0rem 1rem;
 `
 
 const Header = () => {
-
+  const [page, setPage] = useState("home")
   const quantity =  useSelector((state)=>state.cart.quantity);
 
   return (
@@ -50,15 +51,15 @@ const Header = () => {
        <Link to="/"> <Image src='https://res.cloudinary.com/dyqynjew8/image/upload/v1705066915/redparrot-removebg-preview_lliopi.png' /></Link>
         <div style={{height:'5rem' , display:'flex' , alignItems:'center'}}>
             <Links>
-               <Link className='links' to="/" ><Linker>New Arrivals</Linker></Link>
-               <Link  className='links' to="/trending" ><Linker>Trending</Linker></Link>
-               <Link  className='links' to="/men" ><Linker>Men</Linker></Link>
-               <Link  className='links' to="/women" ><Linker>Women</Linker></Link>
+               <Link onClick={()=>setPage("home")}  className={page === "home" ? "links select" : "links"} to="/" ><Linker>New Arrivals</Linker></Link>
+               <Link onClick={()=>setPage("trending")} className={page === "trending" ? "links select" : "links"} to="/trending"><Linker>Trending</Linker></Link>
+               <Link  onClick={()=>setPage("men")} className={page === "men" ? "links select" : "links"} to="/men"><Linker>Men</Linker></Link>
+               <Link  onClick={()=>setPage("women")} className={page === "women" ? "links select" : "links"} to="/women"><Linker>Women</Linker></Link>
             </Links>
         </div>
      
         <RightSection style={{display:'flex'}}> 
-            <Link to="/wallet" className='links' ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/ios-filled/50/ffffff/wallet.png" alt="wallet"/>$654</Linker></Link>
+            <Link to="/wallet" className='links' ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/ios-filled/50/ffffff/wallet.png" alt="wallet"/>$0</Linker></Link>
             <Link to='/profile' className='links' ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/gender-neutral-user.png" alt="gender-neutral-user"/></Linker></Link>
             <Link className='links' to="/cart" ><Linker style={{color:"white"}}><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/shopping-cart.png" alt="shopping-cart"/>{quantity}</Linker></Link>
         </RightSection>

@@ -6,7 +6,7 @@ import {HashLoader} from "react-spinners";
 import {FlexDivWrapper } from "../style"
 const Sale = ({products}) => {
   return (
-    <div>
+    <div style={{padding: "1rem 0rem"}}>
         <SectionHeading title={"Upto 70% Off Sale"} />
         <FlexDivWrapper>
         {products && typeof(products)=='object' ? <div style={{display:'flex'}}>{products.map((cur,index)=>{

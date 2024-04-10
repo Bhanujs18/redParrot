@@ -15,6 +15,7 @@ background-color: #EEEEEE;
 .links{
   text-decoration: none;
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
@@ -30,7 +31,7 @@ background-color: #EEEEEE;
   width:100%;
   display: flex;
   padding: 2rem 0rem;
-  background-color: #ce3345;
+  background-color: #a11122;
 
 }
 
@@ -40,11 +41,43 @@ background-color: #EEEEEE;
   height: 25rem;
 }
 
+.bannerImg{
+  height: 20rem;
+object-fit: cover;
+}
+
+.mySwiper{
+ position: relative;
+ width: 100%;
+}
+
+.bannerText{
+position: absolute;
+font-size: 8rem;
+z-index: 9;
+width: 100%;
+top: 50%;
+transform: translate(-50%, -50%);
+left: 50%;
+text-align: center;
+height: 100%;
+background-color: rgb(0, 0, 0, 0.4);
+h1{
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+width: 100%;
+top: 50%;
+transform: translate(-50%, -50%);
+left: 50%;
+}
+}
+
 .address{
   width: 100%;
   padding:2rem;
   color:white;
-  background-color: #ce3345;
+  background-color: #a11122;
 }
 
 .shippingcon{
@@ -57,7 +90,7 @@ background-color: #EEEEEE;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ce3345;
+  background-color: #a11122;
   width: 50%;
   color: white;
   border-radius: 15px;
@@ -72,7 +105,7 @@ background-color: #EEEEEE;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-color: #e0001a;
+color: #a11122;
 font-size: 1.3rem;
 gap: 1rem;
 padding: 2rem 0rem;
@@ -89,6 +122,48 @@ padding: 2rem 0rem;
     }
   }
 }
+
+.select{
+  background-color: #ce3345;
+  border-radius: 15px;
+  color: white;
+  div{
+    color: white;
+    padding: 0.3rem 1rem;
+  }
+}
+
+.trend-design1{
+  display: flex;
+  height: 25rem;
+  position: relative;
+  overflow: hidden;
+  :nth-child(1){
+    width: 60%;
+  }
+  h1{
+    position: absolute;
+    left: 60%;
+    z-index: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 9rem;
+  }
+  :nth-child(3){
+   height: 50rem;
+   z-index: 1;
+  }
+}
+
+.trending{
+  height: 100%;
+  overflow: hidden;
+}
+
+  .suit{
+    z-index: 2;
+    width: 100%;
+  }
 
 .copyright{
   width: 100%;
@@ -176,7 +251,8 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 color: white;
-background-color: #ce3345;
+/* background-color: #ce3345; */
+background-color: black;
 }
 
 .logo{
@@ -191,11 +267,11 @@ background-color: #ce3345;
  display: flex;
  flex-direction: column;
  align-items: center;
- gap: 0.2rem;
+ gap: 0.5rem;
 }
 
 .app{
-  background-color: black;
+  background-color :#A11122;
 padding: 1rem;
 width: 10rem;
 display: flex;

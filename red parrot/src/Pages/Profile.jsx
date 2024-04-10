@@ -42,11 +42,13 @@ const Wrapper = styled.section`
 
   .card-container {
     padding: 2rem 0rem;
-    border-radius: 5px;
+    border-radius: 15px;
     color: black;
+    width: 20%;
+    // background-color: #c6c6c6;
     padding-top: 30px;
     position: relative;
-    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;    width: 350px;
     max-width: 100%;
     text-align: center;
   }
@@ -107,9 +109,9 @@ const Profile = () => {
 
   return (
     <Wrapper>
-		<div style={{display:'flex'}}>
-      <div className="card-container">
-        <span className="pro">User</span>
+		<div style={{display:'flex' , justifyContent:'center'}}>
+      <div className="card-container" style={{width: '25%'}}>
+        <span className="pro">pro+</span>
         <img
           className="round"
           src="https://cdn.hero.page/pfp/723e650f-63ed-4352-942c-47433f05b22a-l-in-monochrome-best-anime-guys-pfp-2.png"
