@@ -6,7 +6,7 @@ import {FlexDivWrapper} from "../style"
 const NewArrivals = ({products}) => {
   console.log(typeof(products));
   return (
-    <div>
+    <div style={{padding:'1rem 0rem'}}>
         <SectionHeading title={"New Arrivals"} />
         <FlexDivWrapper>
         {products && typeof(products)=='object' ? <div style={{display:'flex'}}>{products.map((cur,index)=>{

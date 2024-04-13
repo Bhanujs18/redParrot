@@ -5,6 +5,7 @@ import styled from "styled-components";
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.section`
 display: flex;
@@ -38,7 +39,7 @@ const Banner = () => {
         <SwiperSlide><img className='bannerImg' style={{width:"100%"}} src="https://www.shutterstock.com/image-photo/man-sitting-on-stairs-lifestyle-600nw-740474782.jpg"/></SwiperSlide>
         <SwiperSlide><img className='bannerImg' style={{width:"100%"}} src='https://social.thearvindstore.com/images/home_banner.jpg?version=2.2.15&subv=1.8' /></SwiperSlide>
       </Swiper>
-      <div className='bannerText'><h1>Welcom</h1></div>
+      <div className='bannerText'><h1>Where Style Becomes You.</h1><NavLink to={"/trending"} style={{textDecoration:'none'}}><button>Explore</button></NavLink></div>
     </Wrapper>
   )
 }

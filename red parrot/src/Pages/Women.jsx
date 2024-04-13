@@ -56,7 +56,8 @@ const Women = () => {
         .get("https://bhanujs18.github.io/red-parrot-data/data.json")
         .then((res) => {
           const data = res.data;
-          setProducts(data);
+          const filtereddata = data.filter((cur) => cur.gender==="female");
+          setProducts(filtereddata);
         })
         .catch((err) => console.log(err));
     } catch {

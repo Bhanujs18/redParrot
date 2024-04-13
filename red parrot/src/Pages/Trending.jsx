@@ -28,7 +28,7 @@ const Trending = () => {
         <div className='trend-design1'>
         <img src='https://i0.wp.com/hqmanila.com/wp-content/uploads/2023/06/2024-mens-fashion-trends.png' />
         <h1><span style={{color:'white'}}>Tren</span>ding</h1>
-        <img src='./imgs/hrx.png' />
+        <img src='./imgs/messi.png' />
         </div>
         <Sale products={products} />
 

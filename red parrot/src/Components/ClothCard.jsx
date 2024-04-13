@@ -19,7 +19,7 @@ const ClothCard = ({cur}) => {
         <Card.Text>
         ${cur.price}
         </Card.Text>
-        <Button variant="primary" onClick={()=>buyNow(cur)}>Buy</Button>
+        <Button style={{background:"#A11122" , border:'none'}} onClick={()=>buyNow(cur)}>Add to cart</Button>
       </Card.Body>
     </Card>
     

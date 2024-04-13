@@ -13,6 +13,7 @@ import Trending from './Trending';
 import Men from './Men';
 import Women from './Women';
 import Footer from '../Components/Header/Footer/Footer';
+import Catalog from './Catalog';
 
 const App = () => {
   const theme =  {
@@ -32,6 +33,7 @@ const App = () => {
         <Route path='/orderPlaced' element={<OrderPlaced />} />
         <Route path='/cart' element={<CartPage />} />
         <Route path='/trending' element={<Trending />} />
+        <Route path='/products/:category?' element={<Catalog />} />
         <Route path='/men' element={<Men />} />
         <Route path='/women' element={<Women />} />
 

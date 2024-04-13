@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const db = require('./db/db')
 const orderRoute = require('./routes/order')
+const userRoute = require('./routes/user')
+
 const cors = require('cors')
 app.use(cors());
 
@@ -14,6 +16,8 @@ app.get("/" , (req , res)=>{
 })
 
 app.use("/api/v1/order" , orderRoute);
+app.use("/api/v1/user" , userRoute);
+
 
 
 app.listen(3000 , ()=>{
